@@ -1,0 +1,13 @@
+# 🧠 LLM vs. SLM: A Comparative Study of Model Trade-Offs
+
+## Project Overview
+
+This project provides a comprehensive comparison between a **Small Language Model (SLM)**, Google's **Gemma 2B Instruct**, and a **Large Language Model (LLM) use case**, demonstrated using **TinyLlama 1.1B**. The goal is to illustrate the critical trade-offs in **performance, efficiency, and ideal use cases**—specifically, prioritizing **low-latency structure** versus **high-scope generality**.
+
+The models are evaluated based on two distinct, real-world tasks:
+1.  **SLM (Gemma 2B):** Action Item Extraction (High Precision, Low Latency).
+2.  **LLM (TinyLlama 1.1B):** Research Query Suggestion (High Scope, Creative Generality).
+
+## 🚀 Repository Structure
+
+The project is organized into modular folders for easy navigation:
