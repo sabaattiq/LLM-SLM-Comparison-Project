@@ -1,0 +1,43 @@
+===================================================
+WORKFLOW: Small Language Model (SLM) - Gemma 2B
+TASK: Action Item Extraction (Structured, High-Fidelity)
+===================================================
+
+AIM: Achieve Low-Latency, High-Precision, Deterministic Output for a narrow task.
+
+--- PSEUDO-CODE WORKFLOW ---
+
+A. START: User Uploads Meeting Transcript
+    - Action: User inputs the text data (e.g., in a Colab text cell).
+
+B. SLM App Interface / Colab Cell
+    - Action: The application prepares the input for the model.
+
+C. Prepare Strict Prompt: Action, Person, Deadline Format
+    - Decision: The prompt is constrained to force a specific output structure. (Crucial for SLM fidelity).
+
+D. Tokenize Prompt
+    - Action: The text is converted into numerical tokens the model understands.
+
+E. Gemma 2B Model Inference (GPU/Edge Device)
+    - Action: The model runs the forward pass. (Focus on speed and minimal resource use).
+
+F. Inference Settings (Constraints)
+    - Settings:
+        - max_new_tokens = 200 (Short, controlled output length)
+        - temperature = 0 (Ensures deterministic, zero-creativity output)
+        - do_sample = False (No randomness)
+
+G. Generate Structured Output (Fast, Deterministic)
+    - Action: The model generates the action items.
+
+H. Decode Output Tokens
+    - Action: The numerical tokens are converted back into human-readable text.
+
+I. Validate Output Format? (Check for 'Action', 'Person', 'Deadline')
+    - Decision: Check if the output adheres to the strict requested format.
+
+    - I -- YES --> J. Display Final Action Items (High Precision)
+    - I -- NO --> K. Error: Re-prompt or Human Review (Rare in well-prompted SLM tasks)
+
+L. END: Low Latency, High Fidelity Result

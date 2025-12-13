@@ -1,0 +1,43 @@
+===================================================
+WORKFLOW: Large Language Model (LLM) - TinyLlama 1.1B
+TASK: Quantum IR Research Suggestion (Open-Ended, Generative)
+===================================================
+
+AIM: Achieve High-Scope, Creative/General, Comprehensive Output.
+
+--- PSEUDO-CODE WORKFLOW ---
+
+A. START: User Inputs Complex Research Query
+    - Action: User provides a prompt requiring deep, multi-step reasoning and creativity.
+
+B. LLM App Interface / Colab Cell
+    - Action: The application manages the input preparation.
+
+C. Prepare Open-Ended Prompt: Suggest Queries, Setups, Metrics
+    - Decision: The prompt is broad, encouraging the model to explore wide knowledge areas. (Crucial for LLM generality).
+
+D. Tokenize Prompt
+    - Action: The text is converted into numerical tokens.
+
+E. TinyLlama 1.1B Model Inference (GPU/Cloud)
+    - Action: The model runs the forward pass. (Focus on deep context and broad knowledge retrieval).
+
+F. Inference Settings (Exploration)
+    - Settings:
+        - max_new_tokens = 1000 (Long, comprehensive output)
+        - temperature = 0.7 (Introduces creativity and diversity)
+        - do_sample = True (Allows for probabilistic, creative generation)
+
+G. Generate Comprehensive Output (Slower, Creative, Diverse)
+    - Action: The model generates the long, detailed response.
+
+H. Decode Output Tokens
+    - Action: The numerical tokens are converted back into human-readable text.
+
+I. Evaluate Output Scope? (Check for breadth/novelty of suggestions)
+    - Decision: Assess if the output is comprehensive and covers all aspects of the complex query.
+
+    - I -- YES --> J. Display Final Research Suggestions (High Recall)
+    - I -- NO --> K. Refinement: Adjust temperature/prompt for more creativity (Common in LLM fine-tuning/prompt engineering)
+
+L. END: High Scope, High Generality Result
